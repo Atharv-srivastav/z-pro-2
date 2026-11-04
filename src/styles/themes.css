@@ -1,19 +1,21 @@
 /* ===================================================================
-   THEME STYLES (Light & Dark Theme Variables and Transitions)
+   THEME STYLES (Custom Palette: #2F4454, #2E151B, #DA7B93, #376E6F, #1C3334)
    =================================================================== */
 
 :root {
-  /* Common Brand Colors */
-  --color-primary: #3b82f6;
-  --color-primary-hover: #2563eb;
-  --color-primary-light: rgba(59, 130, 246, 0.12);
-  --color-secondary: #8b5cf6;
-  --color-accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
-  --color-success: #10b981;
-  --color-success-bg: rgba(16, 185, 129, 0.12);
-  --color-warning: #f59e0b;
-  --color-danger: #ef4444;
-  --color-danger-bg: rgba(239, 68, 68, 0.12);
+  /* Signature Brand Palette Constants */
+  --palette-slate: #2F4454;
+  --palette-wine: #2E151B;
+  --palette-rose: #DA7B93;
+  --palette-teal: #376E6F;
+  --palette-pine: #1C3334;
+
+  /* Universal Functional Colors */
+  --color-success: #38b29c;
+  --color-success-bg: rgba(56, 178, 156, 0.15);
+  --color-warning: #eab308;
+  --color-danger: #e05260;
+  --color-danger-bg: rgba(224, 82, 96, 0.15);
 
   /* Spacing */
   --space-xs: 0.25rem;
@@ -26,9 +28,9 @@
 
   /* Border Radius */
   --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 26px;
   --radius-full: 9999px;
 
   /* Fonts */
@@ -41,56 +43,70 @@
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Light Mode Variables */
-:root[data-theme="light"] {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #ffffff;
-  --bg-tertiary: #f1f5f9;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f8fafc;
-  --bg-input: #ffffff;
-  --bg-glass: rgba(255, 255, 255, 0.85);
+/* 🌙 Dark Mode (Rich Midnight Pine & Slate Wine with Rose & Teal Glow) */
+:root[data-theme="dark"] {
+  --bg-primary: #122122;           /* Deep midnight pine shadow */
+  --bg-secondary: #172a2b;         /* Elevated deep pine */
+  --bg-tertiary: #1C3334;          /* Core palette pine */
+  --bg-card: #1c3234;              /* Card background */
+  --bg-card-hover: #233e40;        /* Subtle interactive hover */
+  --bg-input: #152728;             /* Input field surface */
+  --bg-glass: rgba(23, 42, 43, 0.88);
 
-  --text-primary: #0f172a;
-  --text-secondary: #334155;
-  --text-muted: #64748b;
-  --text-inverse: #ffffff;
+  --color-primary: #DA7B93;        /* Soft radiant rose highlight */
+  --color-primary-hover: #e593a8;
+  --color-primary-light: rgba(218, 123, 147, 0.15);
+  --color-secondary: #376E6F;      /* Oceanic teal */
+  --color-secondary-light: rgba(55, 110, 111, 0.2);
+  --color-accent-gradient: linear-gradient(135deg, #DA7B93 0%, #376E6F 55%, #2F4454 100%);
 
-  --border-primary: #e2e8f0;
-  --border-secondary: #cbd5e1;
-  --border-focus: #3b82f6;
+  --text-primary: #f5f8fa;         /* Crisp near-white */
+  --text-secondary: #d4e2e6;       /* Soft cool slate */
+  --text-muted: #94abb3;           /* Muted pine mist */
+  --text-inverse: #1C3334;
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-  --shadow-glow: 0 0 25px rgba(59, 130, 246, 0.2);
+  --border-primary: #28474a;       /* Clean subtle border */
+  --border-secondary: #376E6F;     /* Highlighted teal border */
+  --border-focus: #DA7B93;         /* Rose focus ring */
+
+  --shadow-sm: 0 1px 3px rgba(18, 33, 34, 0.5);
+  --shadow-md: 0 4px 8px -1px rgba(18, 33, 34, 0.6), 0 2px 4px -2px rgba(18, 33, 34, 0.4);
+  --shadow-lg: 0 12px 20px -3px rgba(18, 33, 34, 0.7), 0 4px 6px -4px rgba(18, 33, 34, 0.5);
+  --shadow-xl: 0 22px 30px -5px rgba(18, 33, 34, 0.85);
+  --shadow-glow: 0 0 32px rgba(218, 123, 147, 0.28);
 }
 
-/* Dark Mode Variables */
-:root[data-theme="dark"] {
-  --bg-primary: #090d16;
-  --bg-secondary: #0f172a;
-  --bg-tertiary: #1e293b;
-  --bg-card: #0f172a;
-  --bg-card-hover: #162036;
-  --bg-input: #111a2e;
-  --bg-glass: rgba(15, 23, 42, 0.85);
+/* ☀️ Light Mode (Frost Mist with Teal, Rose & Deep Slate Accents) */
+:root[data-theme="light"] {
+  --bg-primary: #f4f7f8;           /* Clean soft mist background */
+  --bg-secondary: #ffffff;         /* Pure white surface */
+  --bg-tertiary: #e9f0f2;          /* Elevated mist */
+  --bg-card: #ffffff;
+  --bg-card-hover: #f9fbfc;
+  --bg-input: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.9);
 
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
-  --text-inverse: #0f172a;
+  --color-primary: #376E6F;        /* Core vibrant teal */
+  --color-primary-hover: #295657;
+  --color-primary-light: rgba(55, 110, 111, 0.12);
+  --color-secondary: #DA7B93;      /* Elegant rose */
+  --color-secondary-light: rgba(218, 123, 147, 0.15);
+  --color-accent-gradient: linear-gradient(135deg, #376E6F 0%, #DA7B93 60%, #2F4454 100%);
 
-  --border-primary: #1e293b;
-  --border-secondary: #334155;
-  --border-focus: #60a5fa;
+  --text-primary: #1C3334;         /* Rich deep pine for optimal contrast */
+  --text-secondary: #2F4454;       /* Deep slate navy */
+  --text-muted: #5e7782;           /* Readable muted slate */
+  --text-inverse: #ffffff;
 
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 30px rgba(96, 165, 250, 0.25);
+  --border-primary: #d6e2e5;
+  --border-secondary: #b5cacf;
+  --border-focus: #376E6F;
+
+  --shadow-sm: 0 1px 3px rgba(47, 68, 84, 0.08), 0 1px 2px rgba(47, 68, 84, 0.04);
+  --shadow-md: 0 4px 8px -1px rgba(47, 68, 84, 0.1), 0 2px 4px -2px rgba(47, 68, 84, 0.06);
+  --shadow-lg: 0 12px 18px -3px rgba(47, 68, 84, 0.12), 0 4px 6px -4px rgba(47, 68, 84, 0.06);
+  --shadow-xl: 0 20px 25px -5px rgba(47, 68, 84, 0.15);
+  --shadow-glow: 0 0 28px rgba(55, 110, 111, 0.2);
 }
 
 /* Smooth Theme Transitions */

@@ -1,14 +1,25 @@
 import React from 'react';
-import { Wrench, Layout, Server, Cloud, Check } from 'lucide-react';
+import { 
+  Wrench, 
+  Layout, 
+  Server, 
+  Terminal, 
+  BookOpen, 
+  Sparkles, 
+  Check 
+} from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export default function Skills() {
   const { skills } = portfolioData;
 
   const categoryIcons = {
-    'Frontend Development': Layout,
-    'Backend & Databases': Server,
-    'DevOps & Cloud Tools': Cloud
+    'Programming Languages': Terminal,
+    'Front-End Development': Layout,
+    'Backend, Databases & APIs': Server,
+    'Developer Tools & Testing': Wrench,
+    'Computer Science Core': BookOpen,
+    'AI & Agentic Tools': Sparkles
   };
 
   return (
@@ -17,13 +28,13 @@ export default function Skills() {
         <div className="section-header">
           <div className="section-badge">
             <Wrench size={14} />
-            <span>Technical Stack</span>
+            <span>Technical Expertise</span>
           </div>
           <h2 className="section-title">Skills & Technologies</h2>
-          <p className="section-subtitle">Proficiencies across the complete modern software development lifecycle.</p>
+          <p className="section-subtitle">Proficiencies across full-stack engineering, CS core disciplines, and AI tooling.</p>
         </div>
 
-        <div className="skills-grid">
+        <div className="skills-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))' }}>
           {skills.map((cat, idx) => {
             const Icon = categoryIcons[cat.category] || Wrench;
             return (
@@ -43,7 +54,7 @@ export default function Skills() {
                   >
                     <Icon size={22} />
                   </div>
-                  <h3 style={{ fontSize: '1.2rem', margin: 0 }}>{cat.category}</h3>
+                  <h3 style={{ fontSize: '1.15rem', margin: 0 }}>{cat.category}</h3>
                 </div>
 
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginTop: 'auto' }}>
@@ -55,7 +66,7 @@ export default function Skills() {
                         background: 'var(--bg-tertiary)',
                         color: 'var(--text-primary)',
                         borderRadius: 'var(--radius-full)',
-                        fontSize: '0.875rem',
+                        fontSize: '0.85rem',
                         fontWeight: 500,
                         border: '1px solid var(--border-primary)',
                         display: 'inline-flex',

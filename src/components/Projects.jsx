@@ -113,3 +113,4 @@ export default function Projects({ setActiveView }) {
     </section>
   );
 }
+

@@ -111,13 +111,13 @@ export async function adminLogin(email, password) {
   }
 
   // Fallback demo admin authentication (for local evaluation when Apps Script is not deployed yet)
-  // Default credentials: admin@zeravia.com / Admin@123456
-  if (email.trim().toLowerCase() === 'admin@zeravia.com' && password === 'Admin@123456') {
+  // Default credentials: atharvsrivastava8197@gmail.com / Admin@123456
+  if (email.trim().toLowerCase() === 'atharvsrivastava8197@gmail.com' && password === 'Admin@123456') {
     const localToken = 'mock_token_' + Date.now();
     return {
       success: true,
       token: localToken,
-      user: { email: 'admin@zeravia.com', role: 'Demo Administrator (Local)' },
+      user: { email: 'atharvsrivastava8197@gmail.com', role: 'Atharv Srivastava (Administrator)' },
       isLocal: true
     };
   }
@@ -258,3 +258,4 @@ function deleteFromLocalMock(id) {
     console.error('Error deleting from localStorage:', e);
   }
 }
+

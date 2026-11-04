@@ -308,7 +308,7 @@ export default function AdminDashboard({ setActiveView }) {
                   Default Admin Credentials:
                 </div>
                 <div style={{ color: 'var(--text-secondary)' }}>
-                  Email: <code style={{ color: 'var(--color-primary)' }}>admin@zeravia.com</code>
+                  Email: <code style={{ color: 'var(--color-primary)' }}>atharvsrivastava8197@gmail.com</code>
                 </div>
                 <div style={{ color: 'var(--text-secondary)' }}>
                   Password: <code style={{ color: 'var(--color-primary)' }}>Admin@123456</code>
@@ -326,7 +326,7 @@ export default function AdminDashboard({ setActiveView }) {
                       type="email"
                       id="admin-email"
                       className={`form-control ${loginErrors.email ? 'is-invalid' : ''}`}
-                      placeholder="admin@zeravia.com"
+                      placeholder="atharvsrivastava8197@gmail.com"
                       value={email}
                       onChange={(e) => {
                         setEmail(e.target.value);
@@ -581,3 +581,4 @@ export default function AdminDashboard({ setActiveView }) {
     </div>
   );
 }
+

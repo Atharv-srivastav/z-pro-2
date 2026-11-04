@@ -15,7 +15,7 @@ var SHEET_NAME = 'Contacts';
 var HEADERS = ['ID', 'Name', 'Email', 'Phone', 'Subject', 'Message', 'Timestamp'];
 
 // Default admin credentials (Can be overridden in File > Project Properties > Script Properties)
-var DEFAULT_ADMIN_USER = 'admin@zeravia.com';
+var DEFAULT_ADMIN_USER = 'atharvsrivastava8197@gmail.com';
 var DEFAULT_ADMIN_PASS = 'Admin@123456';
 
 /**
@@ -368,3 +368,4 @@ function createJsonResponse(data) {
   return ContentService.createTextOutput(JSON.stringify(data))
     .setMimeType(ContentService.MimeType.JSON);
 }
+

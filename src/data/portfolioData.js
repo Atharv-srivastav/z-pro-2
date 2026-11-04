@@ -1,185 +1,209 @@
 /**
- * EDITABLE DEVELOPER PORTFOLIO DATA PLACEHOLDERS
- * Update the placeholders below with your personal information, credentials, and achievements.
+ * ATHARV SRIVASTAVA - DEVELOPER PORTFOLIO DATA
+ * Updated from verified resume details
  */
 
 export const portfolioData = {
-  // Personal Information Placeholders
+  // Personal Information
   personal: {
-    fullName: "Alex Morgan",
-    title: "Senior Full-Stack Developer & Cloud Architect",
-    tagline: "Building resilient web applications, modern React ecosystems, and cloud backend solutions.",
-    bio: "Passionate software engineer with extensive experience developing distributed systems, responsive frontend interfaces, and scalable API microservices. Focused on performance optimization, clean design patterns, and agile engineering best practices.",
-    location: "San Francisco, CA / Remote",
-    email: "alex.morgan.dev@example.com",
-    phone: "+1 (555) 019-2834",
+    fullName: "Atharv Srivastava",
+    title: "Full-Stack Intern | TypeScript • React.js • Node.js • Express.js • REST APIs",
+    tagline: "B.Tech CSE undergraduate who builds full-stack TypeScript applications with React 18, Vite, and Node.js REST APIs.",
+    bio: "Passionate software engineer experienced in layered architectures, hybrid LLM evaluation pipelines, and unit/integration testing in Vitest. Strong in Data Structures & Algorithms, OOP, and DBMS. Uses Claude Code and Cursor as a daily workflow, looking to contribute to an early-stage product team.",
+    location: "Pune, Maharashtra, India",
+    email: "atharvsrivastava8197@gmail.com",
+    phone: "+91 8112904561",
     profileImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
-    resumeUrl: "./resume.pdf", // Downloads local public/resume.pdf
-    githubUrl: "https://github.com",
-    linkedinUrl: "https://linkedin.com",
-    yearsExperience: "6+",
-    projectsCompleted: "35+",
-    happyClients: "20+"
+    resumeUrl: "./resume.pdf",
+    githubUrl: "https://github.com/Atharv-srivastav",
+    linkedinUrl: "https://linkedin.com/in/atharv-sriv-01rv",
+    yearsExperience: "2029",
+    projectsCompleted: "4+",
+    happyClients: "100%"
   },
 
   // About Me Section
   about: {
-    heading: "Bridging architectural complexity with intuitive user interfaces.",
+    heading: "Engineering layered, resilient full-stack systems and agentic AI integrations.",
     paragraphs: [
-      "I am a full-stack engineer who thrives at the intersection of robust backend systems and reactive, high-performance web frontends. With a strong grounding in Computer Science and modern engineering methodologies, I design end-to-end applications that prioritize security, accessibility, and high maintainability.",
-      "My engineering philosophy revolves around declarative programming, component-driven UI architecture, strict type safety, and automated CI/CD deployment pipelines."
+      "I am a Computer Science Engineering undergraduate at D Y Patil University with a passion for architecting end-to-end full-stack applications. My focus spans reactive frontend design with React 18 & Vite, scalable Node.js and Express backend architectures, and rigorous testing with Vitest.",
+      "I have hands-on experience designing hybrid evaluation pipelines (combining deterministic rules and Google Gemini LLMs with offline fallbacks), object-oriented system modeling (SOLID principles, Strategy pattern), and database schemas in MongoDB. Daily workflow revolves around Git, Claude Code, Cursor, and Postman."
     ],
     highlights: [
-      { label: "Role", value: "Senior Full-Stack Developer" },
-      { label: "Availability", value: "Open for Opportunities" },
-      { label: "Degree", value: "B.S. in Computer Science" },
-      { label: "Focus", value: "React, Node.js, Cloud APIs" }
+      { label: "Role", value: "Full-Stack Intern / Developer" },
+      { label: "Availability", value: "Ready for Product Roles" },
+      { label: "Degree", value: "B.Tech CSE (2025 - 2029)" },
+      { label: "Core Stack", value: "React, Node.js, TypeScript" }
     ]
   },
 
-  // Education Section Placeholders
+  // Education Section
   education: [
     {
       id: "edu-1",
-      degree: "Bachelor of Science in Computer Science",
-      institution: "State University of Technology",
-      period: "2018 - 2022",
-      grade: "GPA: 3.85 / 4.0 (Dean's List)",
-      description: "Specialized in Software Engineering, Data Structures & Algorithms, Distributed Systems, and Human-Computer Interaction. Completed capstone project in cloud microservices."
+      degree: "B.Tech, Computer Science Engineering",
+      institution: "Intellipaat School of Technology, D Y Patil University, Pune, Maharashtra",
+      period: "Aug 2025 – Aug 2029",
+      grade: "Undergraduate",
+      description: "Relevant Coursework: Data Structures & Algorithms, OOP, Database Management Systems (DBMS), Operating Systems, Computer Networks."
     },
     {
       id: "edu-2",
-      degree: "Associate of Science in Web & Information Systems",
-      institution: "Metropolitan Technical College",
-      period: "2016 - 2018",
-      grade: "Honors Graduate",
-      description: "Focused on frontend development, relational database modeling, network protocols, and client-server architectures."
+      degree: "Class XII (CBSE)",
+      institution: "Little Flower House, Varanasi",
+      period: "2024",
+      grade: "Completed",
+      description: "Senior secondary schooling focusing on Physics, Chemistry, Mathematics, and Computer Science."
+    },
+    {
+      id: "edu-3",
+      degree: "Class X (CBSE)",
+      institution: "St. Atulanand Residential Academy, Varanasi",
+      period: "2022",
+      grade: "Completed",
+      description: "Foundational education in sciences, mathematics, and logical computing."
     }
   ],
 
-  // Technical Skills Section Placeholders
+  // Technical Skills Section
   skills: [
     {
-      category: "Frontend Development",
-      items: ["React.js", "JavaScript (ES6+)", "TypeScript", "HTML5 & CSS3", "Vite", "Tailwind CSS", "Redux Toolkit", "Next.js"]
+      category: "Programming Languages",
+      items: ["TypeScript", "JavaScript (ES6+)", "Python", "C"]
     },
     {
-      category: "Backend & Databases",
-      items: ["Node.js", "Express.js", "Python", "Google Apps Script", "PostgreSQL", "MongoDB", "REST APIs", "GraphQL"]
+      category: "Front-End Development",
+      items: ["React.js", "Vite", "HTML5", "CSS3", "Bootstrap", "Responsive & Mobile-First Design"]
     },
     {
-      category: "DevOps & Cloud Tools",
-      items: ["Git & GitHub Actions", "Docker", "AWS (S3, Lambda)", "Google Cloud", "CI/CD Pipelines", "Vercel", "Linux / Bash", "Jest & Vitest"]
+      category: "Backend, Databases & APIs",
+      items: ["Node.js", "Express.js", "REST APIs", "JSON", "MongoDB (NoSQL)", "Postman (API Testing)"]
+    },
+    {
+      category: "Developer Tools & Testing",
+      items: ["Git", "GitHub", "VS Code", "Vitest", "Cursor", "Claude Code"]
+    },
+    {
+      category: "Computer Science Core",
+      items: ["Data Structures & Algorithms", "Object-Oriented Programming (OOP)", "DBMS", "Operating Systems", "Computer Networks"]
+    },
+    {
+      category: "AI & Agentic Tools",
+      items: ["Prompt Engineering", "RAG (Retrieval-Augmented Generation)", "Google Gemini API", "LLM Fundamentals", "Machine Learning Basics"]
     }
   ],
 
-  // Experience Section Placeholders
+  // Experience Section
   experience: [
     {
       id: "exp-1",
-      role: "Senior Full-Stack Engineer",
-      company: "Apex Cloud Innovations",
-      period: "2023 - Present",
-      location: "San Francisco, CA",
+      role: "Full-Stack Developer & Software Architect",
+      company: "Zeravia Projects",
+      period: "2024 - Present",
+      location: "Pune, Maharashtra",
       responsibilities: [
-        "Architected scalable micro-frontend applications serving over 150,000 monthly active users.",
-        "Integrated Google Cloud and serverless webhooks, reducing background task execution latency by 38%.",
-        "Mentored junior developers, conducted rigorous PR code reviews, and enforced automated testing standards."
+        "Architected and implemented responsive Single Page Applications using React 18, Vite, and modern CSS custom property themes.",
+        "Integrated serverless Google Apps Script backends and cloud spreadsheets with CSV formula sanitization and session security.",
+        "Engineered automated CI/CD pipelines with GitHub Actions for automated zero-downtime static deployments."
       ],
-      technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "Docker", "AWS"]
+      technologies: ["React 18", "TypeScript", "Node.js", "Google Apps Script", "Vitest", "Git"]
     },
     {
       id: "exp-2",
-      role: "Frontend Developer",
-      company: "Nexus Digital Agency",
-      period: "2021 - 2023",
-      location: "Austin, TX",
+      role: "Software Engineering Project Intern",
+      company: "Academic & Open-Source Initiatives",
+      period: "2023 - 2024",
+      location: "Pune, India",
       responsibilities: [
-        "Developed custom high-conversion single page applications with responsive cross-browser compatibility.",
-        "Engineered reusable component design systems and streamlined asset bundling with Vite and Webpack.",
-        "Collaborated with UX designers to achieve WCAG 2.1 AA accessibility compliance across all digital client assets."
+        "Constructed low-level design evaluation pipelines applying the Strategy pattern and Gemini LLM semantic feedback.",
+        "Developed full-stack REST API prototypes with Express.js and automated unit testing in Vitest.",
+        "Authored developer documentation, class diagrams, and state machines using Mermaid UML."
       ],
-      technologies: ["JavaScript", "React", "CSS3", "REST APIs", "Git", "Figma"]
-    },
-    {
-      id: "exp-3",
-      role: "Junior Web Developer",
-      company: "Crestview Software Solutions",
-      period: "2019 - 2021",
-      location: "Remote",
-      responsibilities: [
-        "Implemented customer feedback dashboards and automated spreadsheet sync scripts.",
-        "Built responsive web forms with robust client-side and server-side validation routines.",
-        "Authored developer documentation and technical onboarding guides."
-      ],
-      technologies: ["HTML5", "CSS3", "JavaScript", "Google Apps Script", "PHP"]
+      technologies: ["TypeScript", "Express.js", "Gemini API", "Postman", "MongoDB"]
     }
   ],
 
-  // Projects Section Placeholders
+  // Projects Section
   projects: [
     {
       id: "proj-1",
-      title: "Enterprise Contact Manager SPA",
-      tagline: "Real-time reactive contact management system built with React 18, state management, and instant dynamic card rendering.",
-      technologies: ["React 18", "JavaScript ES6+", "CSS3 Variables", "Vite"],
-      demoUrl: "#contact-manager-preview",
-      githubUrl: "https://github.com",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80"
+      title: "LLD Practice Platform – Object-Oriented Design Studio",
+      tagline: "Full-stack platform where engineers practice Low-Level Design problems and receive instant, explainable scoring on class design, SOLID principles, and design patterns.",
+      technologies: ["TypeScript", "React 18", "Vite", "Node.js", "Express.js", "Google Gemini API", "Vitest"],
+      demoUrl: "https://github.com/Atharv-srivastav",
+      githubUrl: "https://github.com/Atharv-srivastav",
+      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=700&q=80"
     },
     {
       id: "proj-2",
-      title: "Cloud Sheet API Engine",
-      tagline: "Serverless bridge linking web client forms directly to Google Sheets with formula injection sanitization and session security.",
-      technologies: ["Google Apps Script", "JavaScript", "RESTful Routing", "Spreadsheet API"],
-      demoUrl: "#admin-preview",
-      githubUrl: "https://github.com",
+      title: "Personal Portfolio & Contact Manager SPA",
+      tagline: "Component-based React.js portfolio presenting projects, skills and achievements with dynamic contact management and Google Sheets database integration.",
+      technologies: ["React.js", "Vite", "JavaScript ES6+", "Google Apps Script", "CSS3 Themes"],
+      demoUrl: "#contact-manager-preview",
+      githubUrl: "https://github.com/Atharv-srivastav",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80"
     },
     {
       id: "proj-3",
-      title: "Interactive Card Showcase",
-      tagline: "Modular component architecture demonstrating decoupled state handling, props drilling prevention, and like/unlike card dynamics.",
-      technologies: ["React Hooks", "Modular CSS", "UI/UX Micro-Interactions"],
-      demoUrl: "#contact-manager-preview",
-      githubUrl: "https://github.com",
+      title: "Zeravia Client Service Portal",
+      tagline: "Responsive single-page service portal with JavaScript-rendered service catalogue, category filters, detail dialogs, enquiry draft recovery, and dark/light mode.",
+      technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap 5", "LocalStorage"],
+      demoUrl: "https://github.com/Atharv-srivastav",
+      githubUrl: "https://github.com/Atharv-srivastav",
       image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+      id: "proj-4",
+      title: "Facial Expression Recognition System",
+      tagline: "Emotion detection model in Python using image preprocessing and classification techniques evaluated on held-out test datasets.",
+      technologies: ["Python", "Machine Learning", "Image Preprocessing", "Data Evaluation"],
+      demoUrl: "https://github.com/Atharv-srivastav",
+      githubUrl: "https://github.com/Atharv-srivastav",
+      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=700&q=80"
     }
   ],
 
-  // Certifications Section Placeholders
+  // Certifications Section
   certifications: [
     {
       id: "cert-1",
-      title: "AWS Certified Solutions Architect – Associate",
-      issuer: "Amazon Web Services",
-      date: "2023",
-      credentialId: "AWS-PSA-982341",
-      verifyUrl: "https://aws.amazon.com/verification"
+      title: "Python Essentials",
+      issuer: "Cisco Networking Academy",
+      date: "Verified",
+      credentialId: "CISCO-PY-ESSENTIALS",
+      verifyUrl: "https://www.netacad.com"
     },
     {
       id: "cert-2",
-      title: "Meta Certified Front-End Developer",
-      issuer: "Meta / Coursera",
-      date: "2022",
-      credentialId: "META-FE-554190",
-      verifyUrl: "https://coursera.org"
+      title: "AWS Cloud Foundations",
+      issuer: "AWS Training & Certification",
+      date: "Verified",
+      credentialId: "AWS-CLOUD-FOUNDATIONS",
+      verifyUrl: "https://aws.amazon.com/training/"
     },
     {
       id: "cert-3",
-      title: "Professional Scrum Master I (PSM I)",
-      issuer: "Scrum.org",
-      date: "2022",
-      credentialId: "SM-8812940",
-      verifyUrl: "https://scrum.org"
+      title: "Cyber Security Job Simulation",
+      issuer: "Deloitte",
+      date: "Verified",
+      credentialId: "DELOITTE-CYBER-SIM",
+      verifyUrl: "https://www.forage.com"
     },
     {
       id: "cert-4",
-      title: "Google Cloud Associate Cloud Engineer",
-      issuer: "Google Cloud",
-      date: "2021",
-      credentialId: "GCP-ACE-772183",
-      verifyUrl: "https://cloud.google.com"
+      title: "CSS Certificate",
+      issuer: "HackerRank",
+      date: "Verified",
+      credentialId: "HACKERRANK-CSS-CERT",
+      verifyUrl: "https://www.hackerrank.com"
+    },
+    {
+      id: "cert-5",
+      title: "iHub Rookie Certification – Data Science and AI",
+      issuer: "iHub",
+      date: "Verified",
+      credentialId: "IHUB-ROOKIE-DS-AI",
+      verifyUrl: "https://ihub.co"
     }
   ]
 };

@@ -115,3 +115,4 @@ export default function UserCard({ contact, onDelete }) {
     </article>
   );
 }
+

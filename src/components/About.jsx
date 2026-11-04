@@ -45,7 +45,7 @@ export default function About() {
 
             <a 
               href={personal.resumeUrl} 
-              download="Alex_Morgan_Resume.pdf"
+              download="Atharv_Srivastava_Resume.pdf"
               className="btn btn-primary"
               style={{ display: 'inline-flex' }}
             >
@@ -97,3 +97,4 @@ export default function About() {
     </section>
   );
 }
+

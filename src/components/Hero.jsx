@@ -75,7 +75,7 @@ export default function Hero({ onNavigate }) {
               {/* Resume Download Feature */}
               <a 
                 href={personal.resumeUrl} 
-                download="Alex_Morgan_Resume.pdf"
+                download="Atharv_Srivastava_Resume.pdf"
                 className="btn btn-outline"
                 id="resume-download-btn"
                 title="Download verified resume in PDF format"
@@ -178,3 +178,4 @@ export default function Hero({ onNavigate }) {
     </section>
   );
 }
+

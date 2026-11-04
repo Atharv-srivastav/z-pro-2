@@ -111,7 +111,7 @@ export default function Navbar({ activeView, setActiveView }) {
             cursor: 'pointer',
             padding: 0
           }}
-          aria-label="Alex Morgan Portfolio"
+          aria-label="Atharv Srivastava Portfolio"
         >
           <div
             style={{
@@ -130,10 +130,10 @@ export default function Navbar({ activeView, setActiveView }) {
           </div>
           <div style={{ textAlign: 'left' }}>
             <span style={{ fontWeight: 800, fontSize: '1.2rem', color: 'var(--text-primary)', letterSpacing: '-0.02em', display: 'block', lineHeight: 1.1 }}>
-              Alex Morgan
+              Atharv Srivastava
             </span>
             <span style={{ fontSize: '0.75rem', color: 'var(--color-primary)', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-              Full-Stack Architect
+              Full-Stack Developer
             </span>
           </div>
         </button>
@@ -334,3 +334,4 @@ export default function Navbar({ activeView, setActiveView }) {
     </header>
   );
 }
+

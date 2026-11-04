@@ -1,18 +1,18 @@
-# Developer Portfolio & React Contact Management Web Application
+# Atharv Srivastava - Developer Portfolio & React Contact Management SPA
 
 [![React](https://img.shields.io/badge/React-18.3-61dafb?logo=react&logoColor=black)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-5.4-646cff?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Google Apps Script](https://img.shields.io/badge/Google%20Apps%20Script-API-0F9D58?logo=google-sheets&logoColor=white)](https://developers.google.com/apps-script)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-> A modern, responsive developer resume and portfolio website seamlessly integrated with a React Contact Cards Manager SPA, Like/Unlike interactive card mini-project, and a serverless Google Sheets database with Admin Response Dashboard.
+> Personal portfolio website of **Atharv Srivastava** (Full-Stack Developer & Software Architect) integrated with a React Contact Cards Manager SPA, Like/Unlike interactive card mini-project, and a serverless Google Sheets database with Admin Response Dashboard. Styled with a custom designer palette (`#2F4454`, `#2E151B`, `#DA7B93`, `#376E6F`, `#1C3334`).
 
 ---
 
 ## 🌟 Live Demo & Repository
 
-- **Public Live Deployment (GitHub Pages):** [https://zeravia.github.io/portfolio-contact-manager/](https://zeravia.github.io/portfolio-contact-manager/) *(or custom domain)*
-- **GitHub Repository:** [https://github.com/zeravia/portfolio-contact-manager](https://github.com/zeravia/portfolio-contact-manager)
+- **Public Live Deployment (GitHub Pages):** [https://Atharv-srivastav.github.io/portfolio-contact-manager/](https://Atharv-srivastav.github.io/portfolio-contact-manager/)
+- **GitHub Repository:** [https://github.com/Atharv-srivastav/portfolio-contact-manager](https://github.com/Atharv-srivastav/portfolio-contact-manager)
 
 ---
 
@@ -211,7 +211,7 @@ Follow these steps to connect your contact form to a live Google Sheet:
 
 ### Step 3: Configure Administrator Credentials
 By default, the script uses:
-- **Admin Username / Email**: `admin@zeravia.com`
+- **Admin Username / Email**: `atharvsrivastava8197@gmail.com`
 - **Admin Password**: `Admin@123456`
 
 To set custom private credentials:
@@ -309,3 +309,4 @@ This repository includes a fully automated deployment workflow in `.github/workf
 ## 📄 License
 
 This project is licensed under the MIT License. Feel free to use and customize it for your personal developer portfolio.
+
