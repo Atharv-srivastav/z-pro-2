@@ -199,6 +199,43 @@ export default function Navbar({ activeView, setActiveView }) {
             Admin
           </button>
 
+          <button
+            onClick={async () => {
+              const resumePath = `${import.meta.env.BASE_URL}resume.pdf`;
+              try {
+                const response = await fetch(resumePath);
+                if (response.ok) {
+                  const blob = await response.blob();
+                  const blobUrl = window.URL.createObjectURL(blob);
+                  const link = document.createElement('a');
+                  link.href = blobUrl;
+                  link.download = 'Atharv_Srivastava_Resume.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                  setTimeout(() => window.URL.revokeObjectURL(blobUrl), 1000);
+                  return;
+                }
+              } catch (e) {
+                console.warn(e);
+              }
+              window.open(resumePath, '_blank');
+            }}
+            className="btn btn-outline"
+            style={{
+              padding: '0.45rem 0.8rem',
+              fontSize: '0.85rem',
+              borderRadius: 'var(--radius-md)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.4rem'
+            }}
+            title="Download verified resume in PDF format"
+          >
+            <FileDown size={15} />
+            <span>Resume</span>
+          </button>
+
           {/* Theme Toggle Button */}
           <button
             onClick={toggleTheme}
@@ -312,6 +349,47 @@ export default function Navbar({ activeView, setActiveView }) {
           >
             <ShieldCheck size={18} />
             Admin Response Dashboard
+          </button>
+
+          <button
+            onClick={async () => {
+              setMobileMenuOpen(false);
+              const resumePath = `${import.meta.env.BASE_URL}resume.pdf`;
+              try {
+                const response = await fetch(resumePath);
+                if (response.ok) {
+                  const blob = await response.blob();
+                  const blobUrl = window.URL.createObjectURL(blob);
+                  const link = document.createElement('a');
+                  link.href = blobUrl;
+                  link.download = 'Atharv_Srivastava_Resume.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                  setTimeout(() => window.URL.revokeObjectURL(blobUrl), 1000);
+                  return;
+                }
+              } catch (e) {
+                console.warn(e);
+              }
+              window.open(resumePath, '_blank');
+            }}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.75rem',
+              padding: '0.75rem 1rem',
+              fontSize: '1rem',
+              fontWeight: 600,
+              color: 'var(--color-primary)',
+              background: 'var(--color-primary-light)',
+              border: 'none',
+              borderRadius: 'var(--radius-md)',
+              cursor: 'pointer'
+            }}
+          >
+            <FileDown size={18} />
+            Download Resume (PDF)
           </button>
         </div>
       )}

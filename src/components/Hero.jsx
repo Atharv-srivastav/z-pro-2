@@ -25,6 +25,30 @@ export default function Hero({ onNavigate }) {
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleResumeDownload = async (e) => {
+    e.preventDefault();
+    const resumePath = `${import.meta.env.BASE_URL}resume.pdf`;
+    try {
+      const response = await fetch(resumePath);
+      if (response.ok) {
+        const blob = await response.blob();
+        const blobUrl = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = blobUrl;
+        link.download = 'Atharv_Srivastava_Resume.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        setTimeout(() => window.URL.revokeObjectURL(blobUrl), 1000);
+        return;
+      }
+    } catch (err) {
+      console.warn('Blob download fallback:', err);
+    }
+    // Fallback: direct window open
+    window.open(resumePath, '_blank');
+  };
+
   return (
     <section id="home" className="section" style={{ paddingTop: 'calc(76px + var(--space-3xl))', minHeight: '90vh', display: 'flex', alignItems: 'center' }}>
       <div className="container">
@@ -74,7 +98,8 @@ export default function Hero({ onNavigate }) {
 
               {/* Resume Download Feature */}
               <a 
-                href={personal.resumeUrl} 
+                href={`${import.meta.env.BASE_URL}resume.pdf`} 
+                onClick={handleResumeDownload}
                 download="Atharv_Srivastava_Resume.pdf"
                 className="btn btn-outline"
                 id="resume-download-btn"

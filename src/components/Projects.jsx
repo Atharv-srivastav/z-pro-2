@@ -81,6 +81,8 @@ export default function Projects({ setActiveView }) {
                   <a 
                     href={project.demoUrl} 
                     onClick={(e) => handleDemoClick(e, project.demoUrl)}
+                    target={project.demoUrl.startsWith('http') ? '_blank' : undefined}
+                    rel={project.demoUrl.startsWith('http') ? 'noopener noreferrer' : undefined}
                     style={{
                       display: 'inline-flex',
                       alignItems: 'center',
