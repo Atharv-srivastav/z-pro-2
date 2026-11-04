@@ -99,13 +99,12 @@ export default function Navbar({ activeView, setActiveView }) {
       }}
     >
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '76px' }}>
-        {/* Brand / Logo */}
+        {/* Brand Name & Title */}
         <button
           onClick={() => { setActiveView('portfolio'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           style={{
             display: 'flex',
             alignItems: 'center',
-            gap: '0.65rem',
             background: 'none',
             border: 'none',
             cursor: 'pointer',
@@ -113,23 +112,8 @@ export default function Navbar({ activeView, setActiveView }) {
           }}
           aria-label="Atharv Srivastava Portfolio"
         >
-          <div
-            style={{
-              width: '40px',
-              height: '40px',
-              borderRadius: 'var(--radius-md)',
-              background: 'var(--color-accent-gradient)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: '#ffffff',
-              boxShadow: '0 4px 12px rgba(59, 130, 246, 0.3)'
-            }}
-          >
-            <Code2 size={22} />
-          </div>
           <div style={{ textAlign: 'left' }}>
-            <span style={{ fontWeight: 800, fontSize: '1.2rem', color: 'var(--text-primary)', letterSpacing: '-0.02em', display: 'block', lineHeight: 1.1 }}>
+            <span style={{ fontWeight: 800, fontSize: '1.25rem', color: 'var(--text-primary)', letterSpacing: '-0.02em', display: 'block', lineHeight: 1.1 }}>
               Atharv Srivastava
             </span>
             <span style={{ fontSize: '0.75rem', color: 'var(--color-primary)', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>

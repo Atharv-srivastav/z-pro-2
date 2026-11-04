@@ -123,11 +123,10 @@ export default function Hero({ onNavigate }) {
                 position: 'relative',
                 width: 'min(100%, 360px)',
                 aspectRatio: '1 / 1',
-                borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%',
+                borderRadius: '28px',
                 background: 'var(--color-accent-gradient)',
-                padding: '6px',
-                boxShadow: 'var(--shadow-glow)',
-                animation: 'float 6s ease-in-out infinite'
+                padding: '5px',
+                boxShadow: 'var(--shadow-glow)'
               }}
             >
               <img 
@@ -137,7 +136,8 @@ export default function Hero({ onNavigate }) {
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',
-                  borderRadius: 'inherit',
+                  objectPosition: 'center top',
+                  borderRadius: '24px',
                   display: 'block'
                 }}
               />
@@ -160,16 +160,16 @@ export default function Hero({ onNavigate }) {
               }}
             >
               <div>
-                <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--color-primary)' }}>{personal.yearsExperience}</div>
-                <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Years Exp.</div>
+                <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--color-primary)' }}>{personal.stat1Number}</div>
+                <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>{personal.stat1Label}</div>
               </div>
               <div style={{ borderLeft: '1px solid var(--border-primary)', borderRight: '1px solid var(--border-primary)' }}>
-                <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--color-secondary)' }}>{personal.projectsCompleted}</div>
-                <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Projects</div>
+                <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--color-secondary)' }}>{personal.stat2Number}</div>
+                <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>{personal.stat2Label}</div>
               </div>
               <div>
-                <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--color-success)' }}>{personal.happyClients}</div>
-                <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Clients</div>
+                <div style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--color-success)' }}>{personal.stat3Number}</div>
+                <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>{personal.stat3Label}</div>
               </div>
             </div>
           </div>

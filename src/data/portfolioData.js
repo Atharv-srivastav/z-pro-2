@@ -13,13 +13,16 @@ export const portfolioData = {
     location: "Pune, Maharashtra, India",
     email: "atharvsrivastava8197@gmail.com",
     phone: "+91 8112904561",
-    profileImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
+    profileImage: "./images/profile.jpg",
     resumeUrl: "./resume.pdf",
     githubUrl: "https://github.com/Atharv-srivastav",
     linkedinUrl: "https://linkedin.com/in/atharv-sriv-01rv",
-    yearsExperience: "2029",
-    projectsCompleted: "4+",
-    happyClients: "100%"
+    stat1Number: "2029",
+    stat1Label: "Graduation",
+    stat2Number: "4+",
+    stat2Label: "Projects",
+    stat3Number: "100%",
+    stat3Label: "Commitment"
   },
 
   // About Me Section
