@@ -83,8 +83,9 @@ This integrated application fulfills enterprise-grade full-stack standards acros
 | **Build Tool** | Vite 5 | Fast HMR, optimized production tree-shaking |
 | **Icons** | Lucide React | Clean, tree-shakeable SVG icons |
 | **Styling** | Pure CSS3 (Custom Variables) | Modern theming, responsive grid & flexbox, 0-runtime overhead |
-| **Backend API** | Google Apps Script (`Code.gs`) | Serverless `doGet`/`doPost` REST-like action handlers |
-| **Database** | Google Sheets | Cloud spreadsheet serving as structured datastore |
+| **Backend API (Local)** | Node.js (`server/index.js`) | Native HTTP REST & action API, server-side auth, JSON persistence |
+| **Backend API (Cloud)** | Google Apps Script (`Code.gs`) | Serverless `doGet`/`doPost` REST-like action handlers |
+| **Database** | Google Sheets / `db.json` | Cloud spreadsheet or local persistent JSON datastore |
 | **CI/CD** | GitHub Actions | Automated build and deploy workflow to GitHub Pages |
 
 ---
@@ -103,13 +104,20 @@ portfolio-project/
 │
 ├── public/
 │   ├── favicon.svg               # Modern SVG favicon
+│   ├── images/                   # Profile portrait and media assets
 │   └── resume.pdf                # Downloadable developer resume document
+│
+├── scripts/
+│   └── dev.js                    # Unified runner launching backend + Vite together
+│
+├── server/
+│   └── index.js                  # Node.js backend REST API & static production host
 │
 ├── src/
 │   ├── components/               # Modular presentation and functional components
 │   │   ├── About.jsx             # Biography, philosophy, and architectural pillars
 │   │   ├── Certifications.jsx    # Verified certifications with credential verification
-│   │   ├── Contact.jsx           # Validated contact form with Google Sheets integration
+│   │   ├── Contact.jsx           # Validated contact form with backend & Google Sheets integration
 │   │   ├── Education.jsx         # Academic timeline and degrees
 │   │   ├── Experience.jsx        # Career timeline with responsibilities & tech tags
 │   │   ├── Footer.jsx            # Semantic footer with SPA links and copyright
@@ -123,31 +131,38 @@ portfolio-project/
 │   │   └── UserList.jsx          # Parent container mapping contact cards (Part 6)
 │   │
 │   ├── data/
-│   │   └── portfolioData.js      # Centralized editable developer placeholders
+│   │   └── portfolioData.js      # Centralized developer resume & portfolio data
 │   │
 │   ├── hooks/
 │   │   └── useTheme.js           # Light/Dark mode state and localStorage hook
 │   │
 │   ├── pages/
-│   │   ├── AdminDashboard.jsx    # Admin login & Google Sheets response viewer
+│   │   ├── AdminDashboard.jsx    # Admin login & response manager
 │   │   ├── ContactManager.jsx    # React Contact Cards SPA & Like/Unlike showcase
 │   │   └── Portfolio.jsx         # Complete Resume/Portfolio multi-section page
 │   │
 │   ├── services/
-│   │   └── googleSheetsAPI.js    # Fetch client for Google Apps Script Web App
+│   │   └── googleSheetsAPI.js    # Unified API client (Google Apps Script + Node backend + fallback)
 │   │
 │   ├── styles/
 │   │   ├── global.css            # Base typography, reset, buttons, inputs, alerts
 │   │   ├── responsive.css        # Responsive layouts and media queries
 │   │   └── themes.css            # CSS variables for Light and Dark themes
 │   │
-│   ├── App.jsx                   # Application root with view router and state
+│   ├── utils/
+│   │   └── downloadResume.js     # Cross-browser PDF blob download helper
+│   │
+│   ├── App.jsx                   # Application root with hash-synced view router
 │   └── main.jsx                  # React 18 DOM mount point
 │
+├── tests/
+│   └── backend.test.mjs          # Automated Node.js backend integration tests
+│
+├── .env.example                  # Sample environment variables template
 ├── .gitignore
 ├── index.html                    # HTML5 template with Inter & JetBrains Mono fonts
 ├── package.json
-├── vite.config.js                # Vite configuration with relative base support
+├── vite.config.js                # Vite configuration with `/api` proxy & relative base
 └── README.md                     # Comprehensive project documentation
 ```
 
@@ -164,7 +179,7 @@ portfolio-project/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/zeravia/portfolio-contact-manager.git
+   git clone https://github.com/Atharv-srivastav/portfolio-contact-manager.git
    cd portfolio-contact-manager
    ```
 
@@ -173,21 +188,27 @@ portfolio-project/
    npm install
    ```
 
-3. **Start the local development server:**
+3. **Configure environment variables (optional):**
+   Copy `.env.example` to `.env` to customize `PORT`, `ADMIN_EMAIL`, and `ADMIN_PASSWORD` (or set `VITE_GOOGLE_APPS_SCRIPT_URL` to connect directly to Google Sheets).
+
+4. **Start frontend + backend together:**
    ```bash
    npm run dev
    ```
-   Open your browser at `http://localhost:5173`.
+   - Frontend (Vite): `http://localhost:5173`
+   - Backend API (Node.js): `http://localhost:5000` (proxied automatically at `/api/*`)
 
-4. **Build for production:**
+5. **Run backend integration tests:**
+   ```bash
+   npm test
+   ```
+
+6. **Build & run full-stack production server:**
    ```bash
    npm run build
+   npm start
    ```
-
-5. **Preview the production build locally:**
-   ```bash
-   npm run preview
-   ```
+   Serves both the production SPA (`dist/`) and `/api/*` endpoints together on `http://localhost:5000`.
 
 ---
 
